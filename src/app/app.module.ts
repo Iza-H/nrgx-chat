@@ -1,3 +1,4 @@
+import { INITIAL_APPLICATION_STATE } from './store/application-state';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -25,7 +26,7 @@ import { ThreadsService } from './services/threads.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    StoreModule.provideStore({})
+    StoreModule.provideStore({}, INITIAL_APPLICATION_STATE)
   ],
   providers: [ThreadsService],
   bootstrap: [AppComponent]
